@@ -9,7 +9,7 @@ const generateExpiry = (): string => {
   const now = new Date();
   const month = Math.floor(Math.random() * 12) + 1;
   const year = now.getFullYear() + Math.floor(Math.random() * 5) + 1;
-  return `${month.toString().padStart(2, '0')}/${year.toString().slice(-2)}`;
+  return `${month.toString().padStart(2, '0')}|${year.toString().slice(-2)}`;
 };
 
 const generateCVV = (isAmex: boolean): string => {
